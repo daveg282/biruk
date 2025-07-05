@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-export default function Home() {
+export default function Page() {
   const skills = [
     "Cinematography",
     "Color Grading", 
