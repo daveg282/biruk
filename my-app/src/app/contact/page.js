@@ -59,7 +59,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="text-4xl sm:text-5xl font-light text-gray-900 mb-4"
           >
-            Let's <span className="text-amber-600 font-medium">collaborate</span>
+            Let&apos;s <span className="text-amber-600 font-medium">collaborate</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -67,7 +67,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-600 max-w-2xl mx-auto"
           >
-            Have a project in mind? Reach out and let's create something meaningful together.
+            Have a project in mind? Reach out and let&apos;s create something meaningful together.
           </motion.p>
         </div>
       </section>
@@ -137,7 +137,7 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* Contact Form - Enhanced Contrast */}
+            {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}

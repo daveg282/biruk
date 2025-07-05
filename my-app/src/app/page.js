@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function About() {
   const skills = [
@@ -24,10 +25,13 @@ export default function About() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
             alt="Biruk Damtew - Cinematographer"
             className="w-full h-full object-cover scale-110"
+            fill
+            priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/10" />
         </div>
@@ -85,7 +89,7 @@ export default function About() {
             
             <div className="space-y-8 text-lg text-slate-600 leading-relaxed">
               <p>
-                With over a decade of experience in cinematography, I've dedicated my career to transforming ordinary moments into extraordinary visual narratives. My journey began with a simple fascination for how light and shadow could evoke emotion and tell stories without words.
+                With over a decade of experience in cinematography, I&apos;ve dedicated my career to transforming ordinary moments into extraordinary visual narratives. My journey began with a simple fascination for how light and shadow could evoke emotion and tell stories without words.
               </p>
               
               <p>
@@ -93,7 +97,7 @@ export default function About() {
               </p>
               
               <p>
-                When I'm not behind the camera, you'll find me exploring new techniques, mentoring emerging filmmakers, or analyzing the visual language of cinema masters who continue to inspire my work.
+                When I&apos;m not behind the camera, you&apos;ll find me exploring new techniques, mentoring emerging filmmakers, or analyzing the visual language of cinema masters who continue to inspire my work.
               </p>
             </div>
           </motion.div>
@@ -207,7 +211,7 @@ export default function About() {
             </h2>
             
             <blockquote className="text-xl md:text-2xl text-slate-200 leading-relaxed italic max-w-3xl mx-auto">
-              "Every frame is a canvas, every moment an opportunity to capture the extraordinary within the ordinary. I believe cinematography is the poetry of light—it speaks to the soul before the mind understands."
+              &quot;Every frame is a canvas, every moment an opportunity to capture the extraordinary within the ordinary. I believe cinematography is the poetry of light—it speaks to the soul before the mind understands.&quot;
             </blockquote>
           </motion.div>
         </div>
@@ -226,7 +230,7 @@ export default function About() {
               Ready to create something <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">extraordinary?</span>
             </h2>
             <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-              Let's collaborate to bring your vision to life through the power of cinematic storytelling.
+              Let&apos;s collaborate to bring your vision to life through the power of cinematic storytelling.
             </p>
             <motion.a
               href="/contact"
@@ -234,7 +238,7 @@ export default function About() {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center bg-gradient-to-r from-amber-500 to-orange-500 text-white px-10 py-5 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-amber-500/25 transition-all"
             >
-              Let's Collaborate
+              Let&apos;s Collaborate
               <svg 
                 className="ml-2 w-6 h-6 transition-transform group-hover:translate-x-1"
                 fill="none" 

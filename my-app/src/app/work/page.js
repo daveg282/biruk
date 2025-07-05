@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 export default function WorkDetails() {
   const [selectedProject, setSelectedProject] = useState(0)
@@ -13,7 +14,7 @@ export default function WorkDetails() {
       subtitle: "Noir-inspired Short Film",
       year: "2023",
       category: "Narrative",
-      description: "A haunting exploration of urban solitude, Midnight Echo captures the essence of film noir through contemporary cinematography. Every frame was meticulously crafted to evoke the psychological depth of the protagonist's journey through the city's shadows.",
+      description: "A haunting exploration of urban solitude, Midnight Echo captures the essence of film noir through contemporary cinematography. Every frame was meticulously crafted to evoke the psychological depth of the protagonist&apos;s journey through the city&apos;s shadows.",
       challenge: "The primary challenge was achieving authentic noir aesthetics while maintaining modern visual standards. We needed to balance dramatic contrast with subtle character development.",
       solution: "Using a combination of practical lighting and careful color grading, we created a visual language that honored classic noir while feeling fresh and contemporary.",
       images: [
@@ -55,7 +56,7 @@ export default function WorkDetails() {
       subtitle: "Science Fiction Feature",
       year: "2023",
       category: "Narrative",
-      description: "An epic sci-fi journey exploring humanity's place in the cosmos. The cinematography emphasizes scale and wonder, using vast landscapes and intimate character moments to tell a story of discovery and hope.",
+      description: "An epic sci-fi journey exploring humanity&apos;s place in the cosmos. The cinematography emphasizes scale and wonder, using vast landscapes and intimate character moments to tell a story of discovery and hope.",
       challenge: "Balancing the grandeur of sci-fi spectacle with intimate human storytelling required careful attention to visual hierarchy and emotional pacing.",
       solution: "We created a visual language that moved between epic wide shots and intimate close-ups, using natural lighting to ground the fantastical elements in reality.",
       images: [
@@ -172,10 +173,13 @@ export default function WorkDetails() {
                 
                 <div className="relative order-1 lg:order-2">
                   <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                    <img
+                    <Image
                       src={currentProject.images[0]}
                       alt={currentProject.title}
                       className="w-full h-full object-cover"
+                      width={800}
+                      height={600}
+                      priority
                     />
                   </div>
                   
@@ -275,10 +279,12 @@ export default function WorkDetails() {
                     className="group cursor-pointer"
                   >
                     <div className="aspect-[4/3] rounded-lg md:rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <img
+                      <Image
                         src={image}
                         alt={`${currentProject.title} frame ${index + 1}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        width={600}
+                        height={450}
                       />
                     </div>
                   </motion.div>
@@ -316,7 +322,7 @@ export default function WorkDetails() {
                   whileTap={{ scale: 0.95 }}
                   className="inline-flex items-center justify-center border-2 border-amber-500 text-amber-400 px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold hover:bg-amber-500/10 transition-all text-sm md:text-base"
                 >
-                  Let's Collaborate
+                  Let&apos;s Collaborate
                 </motion.a>
               </div>
             </div>

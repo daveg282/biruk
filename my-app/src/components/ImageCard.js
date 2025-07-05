@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function ImageCard({ title, imageUrl, category, aspectRatio = 'aspect-square' }) {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -27,11 +28,15 @@ export default function ImageCard({ title, imageUrl, category, aspectRatio = 'as
           >
             &times;
           </button>
-          <img 
-            src={imageUrl} 
-            alt={title} 
-            className="max-w-full max-h-full object-contain"
-          />
+          <div className="relative w-full h-full max-w-[90vw] max-h-[90vh]">
+            <Image 
+              src={imageUrl} 
+              alt={title} 
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+            />
+          </div>
         </div>
       )}
     </div>
